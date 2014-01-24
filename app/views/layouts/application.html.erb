@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]><html lang="en" class="ie7 ielt9 ielt10 en"><![endif]-->
+<!--[if IE 8 ]><html lang="en" class="ie8 ielt9 ielt10 en"><![endif]-->
+<!--[if IE 9 ]><html lang="en" class="ie9 ielt10 en"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en" class="en">
+<!--<![endif]-->
+<head>
+  <title>IfWebsite</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<%= render 'layouts/header' %>
+
+	<% flash.each do |name, msg| %>
+  	<%= content_tag :div, msg, id: "flash_#{name}" %>
+  <% end %>
+	<%= yield %>
+	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+</body>
+</html>
