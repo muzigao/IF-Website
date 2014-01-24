@@ -1,4 +1,14 @@
 <div class="header">
-  <div class="session-container">
+  <div class="container">
+
+  	<!--Right Rail-->
+  	<div class="session-container">
+  		<% if current_user %>
+				Hi, <%= current_user.name %>
+			  (<%= link_to "Sign out", signout_path, class:"link" %>)
+			<% else %>
+			  <%= link_to "Sign in", signin_path, class:"link"%>
+			<% end %>
+  	</div>
   </div>
 </div>
