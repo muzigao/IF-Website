@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140123013954) do
+ActiveRecord::Schema.define(version: 20140125014156) do
 
   create_table "outfits", force: true do |t|
     t.string   "creator"
@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 20140123013954) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "oauth_token"
+    t.datetime "oauth_expires_at"
   end
 
 end

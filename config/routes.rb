@@ -9,6 +9,11 @@ IfWebsite::Application.routes.draw do
   get 'auth/:provider/callback' => 'sessions#create'
   get 'signout' => 'sessions#destroy', as: 'signout'
 
+  # Set callback for facebook login
+  #match 'auth/:provider/callback', to: 'sessions#create'
+  #match 'auth/failure', to: redirect('/')
+  #match 'signout', to: 'sessions#destroy', as: 'signout'
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

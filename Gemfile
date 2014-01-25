@@ -24,6 +24,9 @@ gem 'turbolinks'
 # Use omniauth for third party auth
 gem 'omniauth-twitter', '=0.0.17'
 
+# Use omniauth for third party auth
+gem 'omniauth-facebook'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
