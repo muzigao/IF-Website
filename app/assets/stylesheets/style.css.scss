@@ -1,9 +1,86 @@
 @import "globals/all";
 
+
+
+/***** Global *****/
+body {
+	font-family: 'lucida grande', sans-serif;
+	font-size: $body-size;
+}
+
+a { text-decoration: none; }
+
+/***** Global End *****/
+
+.container {
+	width: 940px;
+	@extend .centered;
+}
+
 /***** Header Area *****/
 .header {
   width: 100%;
   height: 40px;
   background: $secondary-color;
 }
+
+.session-container {
+	float: right;
+	font-size: $body-size-big;
+	line-height: 38px;
+	color: $secondary-body-color;  
+	.link {
+		@extend .secondary-link;
+		
+	}
+}
 /***** Header Area End ******/
+
+/***** Login ******/
+.signin-container {
+	width: 400px;
+	margin-top: 100px;
+	@extend .centered;
+
+	.heading {
+		@extend .heading-size-1;
+		text-align: center;
+		margin-bottom: 40px;
+	}
+}
+
+.provider-button {
+	width: 100%;
+	height: 45px;
+	color: #fff;
+	line-height: 45px;
+	font-size: 20px;
+	padding-left: 75px;
+	cursor: pointer;
+	position: relative;
+	@include border-radius(2px);
+
+	.icon {
+		position: absolute;
+		width: 55px;
+		height: 45px;
+		top: 0;
+		left: 0;
+		border-right: 1px solid #fff;
+	}
+}
+
+.providers-list {
+	.list-item {
+		margin: 10px 0;
+
+		&.twitter {
+			@extend .provider-button;
+			background: #67aadd;
+			&:hover {
+				background: #6dbae8;
+			}
+		}
+	}
+}
+/***** Login End ******/

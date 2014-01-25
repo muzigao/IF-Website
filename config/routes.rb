@@ -7,7 +7,9 @@ IfWebsite::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root to: "outfits#show"
   get 'auth/:provider/callback' => 'sessions#create'
-  get 'signout' => 'sessions#destroy', as: 'signout'
+
+  get 'signin' => 'sessions#new'
+  get 'signout' => 'sessions#destroy'
 
   # Set callback for facebook login
   #match 'auth/:provider/callback', to: 'sessions#create'
