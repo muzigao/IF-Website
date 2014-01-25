@@ -20,3 +20,11 @@
 	     -o-border-radius: $args;
 	        border-radius: $args;
 }
+
+@mixin text-shadow($args) {
+	-webkit-text-shadow: $args;
+	   -moz-text-shadow: $args;
+	    -ms-text-shadow: $args;
+	     -o-text-shadow: $args;
+	        text-shadow: $args;
+}

@@ -1,5 +1,28 @@
+@import url(http://fonts.googleapis.com/css?family=Muli:300,400);
+@font-face {
+	font-family: 'default-icons';
+	src: asset-url('default-icons.eot');
+    src: asset-url('default-icons.svg#chalkdusterregular') format('svg'), 
+         asset-url('default-icons.eot?#iefix') format('embedded-opentype'),
+         asset-url('default-icons.woff') format('woff'),
+         asset-url('default-icons.ttf') format('truetype');
+}
+
+[class^="icon-"], 
+[class*=" icon-"] {
+	font-family: 'default-icons';
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+}
+
 $body-size: 12px;
 $body-size-big: 14px;
+
+.primary-font { font-family: 'Muli', sans-serif; }
+.heading-size-0 { @extend .primary-font; font-size: 60px; }
 
 .heading-size-1 {
 	font-size: 32px;

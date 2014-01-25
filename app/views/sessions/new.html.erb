@@ -4,8 +4,14 @@
 	<div class="providers-list">
 		<%= link_to('/auth/twitter') do %>
 		<div class="list-item twitter">
-			<span class="icon"></span>
+			<span class="icon"><i class="icon-twitter">T</i></span>
 			Sign in with Twitter
+		</div>
+		<% end %>
+		<%= link_to('/auth/facebook') do %>
+		<div class="list-item facebook">
+			<span class="icon"><i class="icon-facebook">F</i></span>
+			Sign in with Facebook
 		</div>
 		<% end %>
 	</div>
